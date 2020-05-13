@@ -39,8 +39,8 @@ function ShowEndSummary(){
     let answerIndexcounter = 0
     questions.forEach(element => {
         endBlock.innerHTML += Question.getQuestion(element)
-        +" <P>vastasit: "+Question.getAnswer(element, answerIndexes[answerIndexcounter]) 
-        answerIndexcounter ++;})
+        +" <p class=\"usersAnswer\">Vastasit: "+Question.getAnswer(element, answerIndexes[answerIndexcounter]) 
+        answerIndexcounter ++ + "</p>";})
 }
 
 function startQuestionnaire(){
@@ -66,7 +66,7 @@ function ShowAnswerOptions(answers){
     
     answerArray.forEach(element => {
         answerBlock.innerHTML += "<tr><td>"+
-        element+" <button id=\"answerButton\" onclick=AnswerButtonClicked("+answerArray.indexOf(element)+")>Valitse</button></td></tr>"
+        element+" <button id=\"answerButton\" onclick=AnswerButtonClicked("+answerArray.indexOf(element)+")> Valitse <i class=\"far fa-hand-point-left\"></i></button></td></tr>"
         //note no need for " " in onclick
     });
 }

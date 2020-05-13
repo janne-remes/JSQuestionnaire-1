@@ -3,32 +3,17 @@
     --secondary-color: rgb(213,245,227);
 }
 
-.col{
-    border: dotted #000;
-}
-
-.col-left, .col-right{
-    background-color: var(--secondary-color);
-}
-
-.col-left{
-    z-index: 1;
-}
-
-.col-center{
-    background-color: var(--main-color);
-    z-index: 0;
-}
-
-.col-right{
-    font-style: italic;
-    z-index: 2;
+body{
+    margin: 20px;
+    font-family: 'Annie Use Your Telescope';
+    font-size: 22px;
 }
 
 .header{
     text-align: center;
     padding: 15px;
-    border: dotted #555;
+    margin-bottom: 30px;
+    /*border: dotted #555;*/
     border-radius: 75px 75px 0px 0px;
     background-image: linear-gradient(var(--main-color), var(--secondary-color));
 }
@@ -37,20 +22,33 @@
     text-shadow: 3px 3px 5px #080;
 }
 
-#secondRow{
-    box-shadow: 5px 5px 15px #000;
+.col-left, .col-center, .col-right{
+    box-shadow: 5px 5px 15px #DDD;
 }
 
-#answerButton{
-    float: left;
-    margin-right: 15px;
+.col-left, .col-right{
+    z-index: 1;
+    background-color: var(--secondary-color);
+}
+
+.col-center{
+    z-index: 0;
+    background-color: var(--main-color);
+}
+
+.col-right{
+    font-style: italic;
+}
+
+button:hover, #answerButton:hover, .usersAnswer{
+    background-color: #4D4;
 }
 
 #answerBlock{
     width: 100%;
 }
 
-#answerBlock td, #answerBlock th{
+#answerBlock td, #answerBlock th, .usersAnswer{
     background-color: #8F8;
 }
 
@@ -58,16 +56,17 @@
     background-color: #88F;
 }
 
-#questionline{
-    background-color: #E1E;
-    width: 100%;
-    font-weight: bold;
-}
-
 #answerButton{
+    float: left;
+    margin-right: 15px;
     background-color: #FD8;
 }
 
-#answerButton:hover{
-    background-color: #4D4;
+#questionline{
+    background-color: #E1E;
+    font-weight: bold;
+}
+
+.usersAnswer{
+    font-weight: bold;
 }
